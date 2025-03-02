@@ -55,6 +55,7 @@ public class SatisfactoryMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.BUILD_GUN);
+            event.accept(Moditems.NODE_LOCATOR);
         }
     }
 
