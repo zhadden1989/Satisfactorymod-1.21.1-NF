@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "satisfactorymod:block/crafting_station"
+    },
+    "facing=south": {
+      "model": "satisfactorymod:block/crafting_station",
+      "y": 90
+    },
+    "facing=east": {
+      "model": "satisfactorymod:block/crafting_station",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "satisfactorymod:block/crafting_station",
+      "y": 270
+    }
+  }
+}

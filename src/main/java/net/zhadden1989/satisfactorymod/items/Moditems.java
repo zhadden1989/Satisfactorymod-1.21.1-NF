@@ -11,10 +11,14 @@ public class Moditems {
 
 // place items below here ----------------------------------------------------------------------------------------------
 
+//equipment
     public static final DeferredItem<Item> BUILD_GUN = ITEMS.register("build_gun",
             () -> new Item(new Item.Properties())); //equipment workbench t0p0
     public static final DeferredItem<Item> NODE_LOCATOR = ITEMS.register("node_locator",
             () -> new Item(new Item.Properties())); //equipment workbench t0p0
+
+//backpack t0p0
+
 
 // place items above here ----------------------------------------------------------------------------------------------
     public static void register(IEventBus eventBus) {

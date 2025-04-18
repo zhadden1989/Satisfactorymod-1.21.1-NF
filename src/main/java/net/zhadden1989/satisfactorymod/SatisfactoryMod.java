@@ -1,6 +1,7 @@
 package net.zhadden1989.satisfactorymod;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.zhadden1989.satisfactorymod.block.ModBlocks;
 import net.zhadden1989.satisfactorymod.items.Moditems;
 import org.slf4j.Logger;
 
@@ -39,6 +40,7 @@ public class SatisfactoryMod {
         NeoForge.EVENT_BUS.register(this);
 
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -56,6 +58,8 @@ public class SatisfactoryMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.BUILD_GUN);
             event.accept(Moditems.NODE_LOCATOR);
+
+            event.accept(ModBlocks.CRAFTING_STATION);
         }
     }
 

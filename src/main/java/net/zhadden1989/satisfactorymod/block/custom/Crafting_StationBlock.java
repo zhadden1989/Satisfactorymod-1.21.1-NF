@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class Crafting_StationBlock extends HorizontalDirectionalBlock {
     public static final MapCodec<Crafting_StationBlock> CODEC = simpleCodec(Crafting_StationBlock::new);
-    private static final VoxelShape SHAPE = Block.box(-12,0,0,40,29,16);
+    private static final VoxelShape SHAPE = Block.box(-20,0,0,40,29,16);
 
     public Crafting_StationBlock(Properties properties) {
         super(properties);
@@ -36,16 +36,6 @@ public class Crafting_StationBlock extends HorizontalDirectionalBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
-    }
-
-    @Override
-    public BlockState rotate(BlockState pState, Rotation pRotation) {
-        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
-    }
-
-    @Override
-    public BlockState mirror(BlockState pState, Mirror pMirror) {
-        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
     @Override
